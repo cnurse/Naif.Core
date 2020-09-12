@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Text;
+
 // ReSharper disable ClassNeverInstantiated.Global
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
-namespace FamilyTreeProject.Core.Common
+namespace Naif.Core.DateTime
 {
     public class DateValue
     {

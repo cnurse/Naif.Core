@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using FamilyTreeProject.Core.Tests.Common;
-using NUnit.Framework;
 using Naif.Core.Collections;
+using Naif.Core.Tests.Common;
+using NUnit.Framework;
 
 // ReSharper disable ObjectCreationAsStatement
 
-namespace FamilyTreeProject.Core.Tests
+namespace Naif.Core.Tests
 {
     [TestFixture]
     public class PagedListTests

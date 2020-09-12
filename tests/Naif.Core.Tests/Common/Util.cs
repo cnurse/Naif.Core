@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FamilyTreeProject.Core.Tests.Common
+namespace Naif.Core.Tests.Common
 {
     public class Util
     {

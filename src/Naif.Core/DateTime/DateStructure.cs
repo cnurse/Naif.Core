@@ -1,9 +1,10 @@
 ﻿using System.Text;
+
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 // ReSharper disable UnusedMember.Global
 
-namespace FamilyTreeProject.Core.Common
+namespace Naif.Core.DateTime
 {
     public struct DateStructure
     {

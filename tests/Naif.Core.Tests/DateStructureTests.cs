@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace FamilyTreeProject.Core.Tests
+namespace Naif.Core.Tests
 {
     [TestFixture]
     public class DateStructureTests

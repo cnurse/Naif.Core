@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using Naif.Core.Resources;
 
-namespace FamilyTreeProject.Core.Contracts
+namespace Naif.Core.Contracts
 {
     public static class Requires
     {

@@ -1,4 +1,4 @@
-﻿namespace FamilyTreeProject.Core.Common
+﻿namespace Naif.Core.DateTime
 {
     public enum DateType
     {
