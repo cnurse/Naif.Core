@@ -2,12 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <PackageVersion>3.0.1</PackageVersion>
-        <LangVersion>9</LangVersion>
-        <RepositoryUrl>https://github.com/cnurse/Naif.Core</RepositoryUrl>
-        <Title>Naif.Core</Title>
-        <Authors>Charles Nurse (@cnurse)</Authors>
-        <PackageLicenseUrl>https://github.com/cnurse/Naif.Core/blob/main/LICENSE</PackageLicenseUrl>
+        <PackageVersion>3.0.2</PackageVersion>
+        <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
     </PropertyGroup>
 
     <ItemGroup>
