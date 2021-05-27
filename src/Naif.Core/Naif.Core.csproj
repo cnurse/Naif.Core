@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <PackageVersion>3.0.3</PackageVersion>
+        <PackageVersion>3.1.0</PackageVersion>
         <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
     </PropertyGroup>
 

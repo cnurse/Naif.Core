@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Naif.Core</id>
-        <version>3.0.3</version>
+        <version>3.1.0</version>
         <authors>Charles Nurse</authors>
         <title>Naif.Core</title>
         <description>This package contains a collection of small helper classes and methods</description>
@@ -12,6 +12,13 @@
         <projectUrl>https://github.com/cnurse/Naif.Core</projectUrl>
         <repository>https://github.com/cnurse/Naif.Core</repository>
         <summary>This package contains a collection of small helper classes and methods</summary>
+        <dependencies>
+            <group targetFramework=".NETStandard2.1">
+                <dependency id="Microsoft.AspNetCore.Http" version="2.2.2" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.Extensions.Caching.Memory" version="5.0.0" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.Extensions.Logging" version="5.0.0" exclude="Build,Analyzers" />
+            </group>
+        </dependencies>
     </metadata>
     <files>
         <file src="bin\Release\netstandard2.1\Naif.Core.dll" target="lib\netstandard2.1" />
