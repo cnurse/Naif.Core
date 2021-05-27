@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Naif.Core</id>
+        <version>3.0.2</version>
+        <authors>Charles Nurse</authors>
+        <title>Naif.Core</title>
+        <description>This package contains a collection of small helper classes and methods</description>
+        <copyright>Charles Nurse</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/cnurse/Naif.Core</projectUrl>
+    </metadata>
+    <files>
+        <file src="bin\Release\netstandard2.1\Naif.Core.dll" target="lib\netstandard2.1" />
+    </files>
+</package>
