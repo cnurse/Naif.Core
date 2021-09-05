@@ -6,7 +6,6 @@ namespace Naif.Core.Models
     {
         public string BaseUrl { get; set; }
         public string CssClass { get; set; }
-        public string Filter { get; set; }
         public bool HasPreviousPage { get; set; }
         public bool HasNextPage { get; set; }
         public string NextCssClass { get; set; }
@@ -15,6 +14,6 @@ namespace Naif.Core.Models
         public int PageIndex { get; set; }
         public string PreviousCssClass { get; set; }
         public string PreviousText { get; set; }
-        public Dictionary<string, string> RouteValues { get; set; }
+        public Dictionary<string, object> RouteValues { get; set; }
     }
 }
