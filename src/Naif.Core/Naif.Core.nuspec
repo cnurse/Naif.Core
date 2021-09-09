@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Naif.Core</id>
-        <version>3.2.0</version>
+        <version>3.2.1</version>
         <authors>Charles Nurse</authors>
         <title>Naif.Core</title>
         <description>This package contains a collection of small helper classes and methods</description>
@@ -22,5 +22,6 @@
     </metadata>
     <files>
         <file src="bin\Release\netstandard2.1\Naif.Core.dll" target="lib\netstandard2.1" />
+        <file src="bin\Release\netstandard2.1\Naif.Core.pdb" target="lib\netstandard2.1" />
     </files>
 </package>
