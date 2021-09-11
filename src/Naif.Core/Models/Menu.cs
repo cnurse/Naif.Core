@@ -3,7 +3,13 @@ namespace Naif.Core.Models
 {
     public class Menu : BaseMenuItem
     {
+        public Menu()
+        {
+            Depth = 1;
+        }
+        
         public string CssClass { get; set; }
+        public int Depth { get; set;}
         public string IsActiveCssClass { get; set; }
     }
 }
