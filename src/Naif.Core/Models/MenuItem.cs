@@ -1,6 +1,7 @@
-﻿namespace Naif.Core.Models
+﻿// ReSharper disable ClassNeverInstantiated.Global
+namespace Naif.Core.Models
 {
-    public class MenuItem
+    public class MenuItem : BaseMenuItem
     {
         public string Action { get; set; }
         

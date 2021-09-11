@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-
+﻿// ReSharper disable UnusedType.Global
 namespace Naif.Core.Models
 {
-    public class Menu
+    public class Menu : BaseMenuItem
     {
         public string CssClass { get; set; }
         public string IsActiveCssClass { get; set; }
-        public IList<MenuItem> Items { get; set; }
     }
 }
