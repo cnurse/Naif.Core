@@ -8,10 +8,8 @@ namespace Naif.Core.Models
             Depth = 1;
         }
         
-        public string CssClass { get; set; }
         public int Depth { get; set;}
-        public string IsActiveCssClass { get; set; }
         
-        public string SubMenuCssClass { get; set; }
+        public string IsActiveCssClass { get; set; }
     }
 }
