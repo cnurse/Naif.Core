@@ -11,5 +11,7 @@ namespace Naif.Core.Models
         public string CssClass { get; set; }
         public int Depth { get; set;}
         public string IsActiveCssClass { get; set; }
+        
+        public string SubMenuCssClass { get; set; }
     }
 }
