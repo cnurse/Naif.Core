@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Naif.Core</id>
-        <version>3.3.1-alpha.1</version>
+        <version>3.3.1-alpha.2</version>
         <authors>Charles Nurse</authors>
         <title>Naif.Core</title>
         <description>This package contains a collection of small helper classes and methods</description>
