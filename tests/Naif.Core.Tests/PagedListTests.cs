@@ -23,7 +23,7 @@ namespace Naif.Core.Tests
             IQueryable<int> list = Util.CreateIntegerList(totalCount).AsQueryable();
 
             //Act
-            new PagedList<int>(list, pageIndex, Constants.PAGE_RecordCount);
+            new PagedList<int>(list, pageIndex, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             //asserted by no exception :)
@@ -37,10 +37,10 @@ namespace Naif.Core.Tests
         public void PagedList_Constructor_Overload_Succeeds_When_Given_Valid_Index(int totalCount, int pageIndex)
         {
             //Arrange
-            IQueryable<int> list = Util.CreateIntegerList(Constants.PAGE_RecordCount).AsQueryable();
+            IQueryable<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_RecordCount).AsQueryable();
 
             //Act
-            new PagedList<int>(list, totalCount, pageIndex, Constants.PAGE_RecordCount);
+            new PagedList<int>(list, totalCount, pageIndex, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             //asserted by no exception :)
@@ -56,7 +56,7 @@ namespace Naif.Core.Tests
             //Arrange
             IQueryable<int> list = Util.CreateIntegerList(totalCount).AsQueryable();
 
-            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, pageIndex, Constants.PAGE_RecordCount));
+            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, pageIndex, Naif.Core.Tests.Common.Constants.PAGE_RecordCount));
         }
 
         [Test]
@@ -66,9 +66,9 @@ namespace Naif.Core.Tests
         public void PagedList_Constructor_Overload_Throws_When_Given_InValid_Index(int totalCount, int pageIndex)
         {
             //Arrange
-            IQueryable<int> list = Util.CreateIntegerList(Constants.PAGE_RecordCount).AsQueryable();
+            IQueryable<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_RecordCount).AsQueryable();
 
-            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, totalCount, pageIndex, Constants.PAGE_RecordCount));
+            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, totalCount, pageIndex, Naif.Core.Tests.Common.Constants.PAGE_RecordCount));
         }
 
         [Test]
@@ -90,7 +90,7 @@ namespace Naif.Core.Tests
         public void PagedList_Constructor_Overload_Throws_When_Given_Invalid_PageSize(int totalCount, int pageIndex)
         {
             //Arrange
-            IQueryable<int> list = Util.CreateIntegerList(Constants.PAGE_RecordCount).AsQueryable();
+            IQueryable<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_RecordCount).AsQueryable();
 
             Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, totalCount, pageIndex, -1));
         }
@@ -99,33 +99,33 @@ namespace Naif.Core.Tests
         public void PagedList_Constructor_Throws_When_Given_Negative_Index()
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act, Assert
-            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, Constants.PAGE_NegativeIndex, Constants.PAGE_RecordCount));
+            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, Naif.Core.Tests.Common.Constants.PAGE_NegativeIndex, Naif.Core.Tests.Common.Constants.PAGE_RecordCount));
         }
 
         [Test]
         public void PagedList_Constructor_Overload_Throws_When_Given_Negative_Index()
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_RecordCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Act, Assert
-            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, Constants.PAGE_TotalCount, Constants.PAGE_NegativeIndex, Constants.PAGE_RecordCount));
+            Assert.Throws<IndexOutOfRangeException>(() => new PagedList<int>(list, Naif.Core.Tests.Common.Constants.PAGE_TotalCount, Naif.Core.Tests.Common.Constants.PAGE_NegativeIndex, Naif.Core.Tests.Common.Constants.PAGE_RecordCount));
         }
 
         [Test]
         [TestCase(0, true)]
         [TestCase(1, true)]
-        [TestCase(Constants.PAGE_Last, false)]
+        [TestCase(Naif.Core.Tests.Common.Constants.PAGE_Last, false)]
         public void PagedList_HasNextPage_Has_Correct_Value_When_Given_Valid_Index(int index, bool hasNext)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
-            var pagedList = new PagedList<int>(list, index, Constants.PAGE_RecordCount);
+            var pagedList = new PagedList<int>(list, index, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             Assert.AreEqual(hasNext, pagedList.HasNextPage);
@@ -134,14 +134,14 @@ namespace Naif.Core.Tests
         [Test]
         [TestCase(0, false)]
         [TestCase(1, true)]
-        [TestCase(Constants.PAGE_Last, true)]
+        [TestCase(Naif.Core.Tests.Common.Constants.PAGE_Last, true)]
         public void PagedList_HasPreviousPage_Has_Correct_Value_When_Given_Valid_Index(int index, bool hasPrevious)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
-            var pagedList = new PagedList<int>(list, index, Constants.PAGE_RecordCount);
+            var pagedList = new PagedList<int>(list, index, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             Assert.AreEqual(hasPrevious, pagedList.HasPreviousPage);
@@ -150,14 +150,14 @@ namespace Naif.Core.Tests
         [Test]
         [TestCase(0, true)]
         [TestCase(1, false)]
-        [TestCase(Constants.PAGE_Last, false)]
+        [TestCase(Naif.Core.Tests.Common.Constants.PAGE_Last, false)]
         public void PagedList_IsFirstPage_Has_Correct_Value_When_Given_Valid_Index(int index, bool isFirst)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
-            var pagedList = new PagedList<int>(list, index, Constants.PAGE_RecordCount);
+            var pagedList = new PagedList<int>(list, index, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             Assert.AreEqual(isFirst, pagedList.IsFirstPage);
@@ -166,14 +166,14 @@ namespace Naif.Core.Tests
         [Test]
         [TestCase(0, false)]
         [TestCase(1, false)]
-        [TestCase(Constants.PAGE_Last, true)]
+        [TestCase(Naif.Core.Tests.Common.Constants.PAGE_Last, true)]
         public void PagedList_IsLastPage_Has_Correct_Value_When_Given_Valid_Index(int index, bool isLast)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
-            var pagedList = new PagedList<int>(list, index, Constants.PAGE_RecordCount);
+            var pagedList = new PagedList<int>(list, index, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             Assert.AreEqual(isLast, pagedList.IsLastPage);
@@ -182,14 +182,14 @@ namespace Naif.Core.Tests
         [Test]
         [TestCase(0)]
         [TestCase(1)]
-        [TestCase(Constants.PAGE_Last)]
+        [TestCase(Naif.Core.Tests.Common.Constants.PAGE_Last)]
         public void PagedList_Returns_Correct_Page_When_Given_Valid_Index(int index)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
-            var pagedList = new PagedList<int>(list, index, Constants.PAGE_RecordCount);
+            var pagedList = new PagedList<int>(list, index, Naif.Core.Tests.Common.Constants.PAGE_RecordCount);
 
             //Assert
             Assert.AreEqual(index, pagedList.PageIndex);
@@ -201,10 +201,10 @@ namespace Naif.Core.Tests
         public void PagedList_Returns_Correct_RecordCount_When_Given_Valid_Index(int pageSize)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
-            var pagedList = new PagedList<int>(list, Constants.PAGE_First, pageSize);
+            var pagedList = new PagedList<int>(list, Naif.Core.Tests.Common.Constants.PAGE_First, pageSize);
 
             //Assert
             Assert.AreEqual(pageSize, pagedList.PageSize);
@@ -218,7 +218,7 @@ namespace Naif.Core.Tests
         public void PagedList_Returns_Correct_Values_When_Given_Valid_Index_And_PageSize(int index, int pageSize)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
             var pagedList = new PagedList<int>(list, index, pageSize);
@@ -238,7 +238,7 @@ namespace Naif.Core.Tests
         public void PagedList_Sets_Correct_PageCount(int index, int pageSize, int pageCount)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
             var pagedList = new PagedList<int>(list, index, pageSize);
@@ -255,13 +255,13 @@ namespace Naif.Core.Tests
         public void PagedList_Sets_TotalCount_To_Total_Number_Of_Items(int index, int pageSize)
         {
             //Arrange
-            List<int> list = Util.CreateIntegerList(Constants.PAGE_TotalCount);
+            List<int> list = Util.CreateIntegerList(Naif.Core.Tests.Common.Constants.PAGE_TotalCount);
 
             //Act
             var pagedList = new PagedList<int>(list, index, pageSize);
 
             //Assert
-            Assert.AreEqual(Constants.PAGE_TotalCount, pagedList.TotalCount);
+            Assert.AreEqual(Naif.Core.Tests.Common.Constants.PAGE_TotalCount, pagedList.TotalCount);
         }
     }
 }
