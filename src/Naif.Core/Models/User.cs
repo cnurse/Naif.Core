@@ -23,7 +23,7 @@ namespace Naif.Core.Models
 
         public bool IsAuthenticated { get; set; }
         
-        public DateTime LastUpdated {get; set;}
+        public System.DateTime LastUpdated {get; set;}
         
         public string Locale {get; set;}
         
