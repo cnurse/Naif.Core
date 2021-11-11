@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <ProductVersion>3.3.1</ProductVersion>
-        <FileVersion>3.3.1.6</FileVersion>
+        <FileVersion>3.3.1.7</FileVersion>
         <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
     </PropertyGroup>
 
