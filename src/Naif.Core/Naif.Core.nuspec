@@ -10,7 +10,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <license type="expression">MIT</license>
         <projectUrl>https://github.com/cnurse/Naif.Core</projectUrl>
-        <repository>https://github.com/cnurse/Naif.Core</repository>
+        <repository type="git" url="https://github.com/cnurse/Naif.Core" branch="main" />
         <summary>This package contains a collection of small helper classes and methods</summary>
         <dependencies>
             <group targetFramework=".NETStandard2.1">
