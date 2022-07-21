@@ -2,8 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <ProductVersion>3.3.2</ProductVersion>
-        <FileVersion>3.3.2.1</FileVersion>
+        <ProductVersion>3.3.3</ProductVersion>
+        <FileVersion>3.3.3.0</FileVersion>
         <NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
         <LangVersion>latestmajor</LangVersion>
         <RepositoryUrl>https://github.com/cnurse/Naif.Core</RepositoryUrl>

@@ -40,7 +40,7 @@ namespace Naif.Core.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FamilyTreeProject.Core.Resources.CommonErrors", typeof(CommonErrors).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Naif.Core.Resources.CommonErrors", typeof(CommonErrors).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
