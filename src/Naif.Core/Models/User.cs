@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Naif.Core.Models
@@ -7,6 +8,7 @@ namespace Naif.Core.Models
         public User()
         {
             Created = System.DateTime.MinValue;
+            Metadata = new Dictionary<string, string>();
             Roles = new List<Role>();
             LastUpdated = System.DateTime.MinValue;
         }
@@ -26,7 +28,9 @@ namespace Naif.Core.Models
         public System.DateTime LastUpdated {get; set;}
         
         public string Locale {get; set;}
-        
+
+        public IDictionary<string, string> Metadata { get; }
+
         public string NickName { get; set; }
 
         public string Name { get; set; }
