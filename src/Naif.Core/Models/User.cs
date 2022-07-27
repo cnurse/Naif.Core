@@ -29,7 +29,7 @@ namespace Naif.Core.Models
         
         public string Locale {get; set;}
 
-        public IDictionary<string, string> Metadata { get; }
+        public IDictionary<string, string> Metadata { get; set; }
 
         public string NickName { get; set; }
 
