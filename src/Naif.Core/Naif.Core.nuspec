@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Naif.Core</id>
-        <version>3.4.0-alpha-01</version>
+        <version>3.4.0-alpha-02</version>
         <authors>Charles Nurse</authors>
         <title>Naif.Core</title>
         <description>This package contains a collection of small helper classes and methods</description>
@@ -14,9 +14,9 @@
         <summary>This package contains a collection of small helper classes and methods</summary>
         <dependencies>
             <group targetFramework=".NETStandard2.1">
-                <dependency id="Microsoft.AspNetCore.Http" version="2.2.2" exclude="Build,Analyzers" />
-                <dependency id="Microsoft.Extensions.Caching.Memory" version="7.0.0" exclude="Build,Analyzers" />
-                <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.AspNetCore.Http" version="2.3.10" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.Extensions.Caching.Memory" version="10.0.8" exclude="Build,Analyzers" />
+                <dependency id="Microsoft.Extensions.Logging" version="10.0.8" exclude="Build,Analyzers" />
             </group>
         </dependencies>
     </metadata>
