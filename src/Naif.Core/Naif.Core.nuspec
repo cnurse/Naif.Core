@@ -19,9 +19,11 @@
                 <dependency id="Microsoft.Extensions.Logging" version="10.0.8" exclude="Build,Analyzers" />
             </group>
         </dependencies>
+        <readme>docs\README.md</readme>
     </metadata>
     <files>
         <file src="bin\Release\netstandard2.1\Naif.Core.dll" target="lib\netstandard2.1" />
         <file src="bin\Release\netstandard2.1\Naif.Core.pdb" target="lib\netstandard2.1" />
+        <file src="..\..\README.md" target="docs\" />
     </files>
 </package>
