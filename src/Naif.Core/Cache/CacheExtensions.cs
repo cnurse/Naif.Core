@@ -13,8 +13,11 @@ namespace Naif.Core.Cache
                 // fetch the value from the source
                 cachedObject = refreshCache();
 
-                // store in the cache
-                memoryCache.Set(cacheKey, cachedObject, cacheOptions);
+                // store in the cache unless the object is null
+                if (cachedObject != null)
+                {
+                    memoryCache.Set(cacheKey, cachedObject, cacheOptions);
+                }
                 
                 logger.LogInformation($"{cacheKey} updated from source.");
             }
